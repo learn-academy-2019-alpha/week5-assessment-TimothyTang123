@@ -8,6 +8,18 @@
 #hello_world("es") should return "Hola Mundo"
 #hello_world("de") should return "Hallo Welt"
 
+def translator(string)
+  if string == "en"
+    p "Hello World"
+  elsif string == "de"
+    p "Hallo Welt"
+  elsif string == "es"
+    p "Hola Mundo"
+  else
+    p "Not coded to accept other languages at this time."
+  end
+end
+translator("de")
 
 
 # The Grade Assigner
@@ -18,6 +30,22 @@
 # assign_grade(90) should return A
 # assign_grade(75) should return C
 
+def grade(num)
+  if num >= 90 && num <= 100
+    p "A"
+  elsif num >= 80 && num <= 89
+    p "B"
+  elsif num >= 70 && num <= 79
+    p "C"
+  elsif num >= 60 && num <= 69
+    p "D"
+  elsif num > 0 && num <= 59
+    p "F"
+  else
+    p "Cannot recieve higher than 100 or lower than 0"
+  end
+end
+grade(95)
 
 # The Pluralizer
 # Write a method named pluralizer that:
@@ -29,3 +57,30 @@
 # Arguments will always be a number and a singular noun.
 
 # Bonus: Make it handle a few collective nouns like "sheep", "geese", "children", "people" and "species".
+
+def pluarlizer(num, noun)
+  if noun == "sheep"
+    p "#{num} Sheep"
+  elsif noun == "species"
+    p "#{num} Species"
+  elsif num == 1 && noun == "children"
+    p "#{num} Child"
+  elsif num >= 2 && noun == "children"
+    p "#{num} Children"
+  elsif num > 1 && noun == "geese"
+    p "#{num} Geese"
+  elsif num ==  1 && noun == "geese"
+    p "#{num} Goose"
+  elsif num >= 2 && noun ==  "geese"
+    p "#{num} Geese"
+  elsif num ==  1 && noun == "people"
+    p "#{num} Person"
+  elsif num >= 2 && noun == "people"
+    p "#{num} People"
+  elsif num > 1
+    p "#{num} #{noun}s"
+  else
+    p "Something is wrong"
+  end
+end
+pluarlizer(5, "children")
